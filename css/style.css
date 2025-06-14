@@ -1,0 +1,933 @@
+/* Valentine Roland - Violinist Website Styles */
+
+/* CSS Variables - Color Scheme from Original Site */
+:root {
+    --ast-global-color-0: #F9C349; /* Golden yellow */
+    --ast-global-color-1: #FFB100; /* Orange */
+    --ast-global-color-2: #1E1810; /* Dark brown/black */
+    --ast-global-color-3: #62615C; /* Gray */
+    --ast-global-color-4: #F3F0E6; /* Warmer, slightly darker cream */
+    --ast-global-color-5: #FFFFFF; /* White */
+    --ast-global-color-6: #000000; /* Black */
+    --ast-global-color-7: #4B4F58; /* Dark gray */
+    --ast-global-color-8: #F6F7F8; /* Light gray */
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ast-global-color-3);
+    background-color: var(--ast-global-color-4);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+    color: #654321 !important; /* Dark brown - improved contrast */
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--ast-global-color-2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--ast-global-color-1);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: rgba(243, 240, 230, 0.9);
+    border-bottom: 1px solid #eaeaea;
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 42px;
+    font-family: 'Great Vibes', cursive;
+    color: #654321 !important; /* Dark brown - improved contrast */
+    font-weight: 400;
+}
+
+/* Navigation */
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-navigation a {
+    font-size: 18px;
+    color: #271f1f;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: #211a1a;
+}
+
+/* Social Icons in Header */
+.header-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--ast-global-color-0);
+    transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+    fill: var(--ast-global-color-2);
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../images/hero_image.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(248, 247, 243, 0.7) 0%, rgba(249, 195, 73, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin-bottom: 0.5rem;
+    color: #FFFFFF !important; /* Pure white for hero */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Great Vibes', cursive;
+    font-size: 120px;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: #FFFFFF !important; /* Pure white for hero */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: var(--ast-global-color-5);
+}
+
+.section-gradient {
+    background: linear-gradient(135deg, var(--ast-global-color-4) 0%, var(--ast-global-color-0) 100%);
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text {
+    padding: 40px;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Music Grid */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.music-card {
+    background: var(--ast-global-color-5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.music-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.music-card h3 {
+    margin-bottom: 15px;
+    color: #654321 !important; /* Dark brown - improved contrast */
+}
+
+.music-card .btn {
+    background-color: #654321 !important; /* Dark brown */
+    color: var(--ast-global-color-4) !important;
+    border-color: #654321 !important;
+}
+
+.music-card .btn:hover {
+    background-color: var(--ast-global-color-0) !important; /* Golden yellow */
+    color: var(--ast-global-color-4) !important;
+    border-color: var(--ast-global-color-0) !important;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #654321 !important; /* Dark brown */
+    color: var(--ast-global-color-4) !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    border-color: #654321 !important;
+}
+
+.btn:hover {
+    background-color: var(--ast-global-color-0) !important; /* Golden yellow */
+    color: var(--ast-global-color-4) !important;
+    border-color: var(--ast-global-color-0) !important;
+}
+
+.btn-outline {
+    background-color: var(--ast-global-color-2);
+    border: 2px solid var(--ast-global-color-2);
+}
+
+.btn-outline:hover {
+    background-color: var(--ast-global-color-0);
+    border-color: var(--ast-global-color-0);
+}
+
+/* CTA Section */
+.cta-section {
+    background-image: url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=85');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #F0EBE3; /* More obviously cream but still light */
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 24, 16, 0.8) 0%, rgba(249, 195, 73, 0.6) 100%);
+    z-index: 1;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-section h1 {
+    color: #F0EBE3 !important; /* More obviously cream */
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #F0EBE3; /* More obviously cream */
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--ast-global-color-4);
+    border-top: 2px solid var(--ast-global-color-4);
+    padding: 96px 40px 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: #654321 !important; /* Dark brown - improved contrast */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu a {
+    color: #4c5262;
+    font-size: 16px;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: var(--ast-global-color-1);
+}
+
+.footer-bottom {
+    background-color: var(--ast-global-color-4);
+    border-top: 1px solid var(--ast-global-color-4);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.footer-social .social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Navigation Styles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--ast-global-color-2);
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .main-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--ast-global-color-5);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .main-navigation.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+    }
+    
+    .main-navigation li {
+        border-bottom: 1px solid var(--ast-global-color-4);
+    }
+    
+    .main-navigation a {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 48px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 24px; }
+    
+    .hero-section {
+        padding: 120px 20px 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 80px !important; /* Smaller on mobile but still dramatic */
+    }
+    
+    .hero-content p {
+        font-size: 20px !important; /* Smaller subtitle on mobile */
+        letter-spacing: 2px;
+    }
+    
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 544px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 28px; }
+    
+    .hero-section {
+        padding: 100px 15px 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 60px !important; /* Even smaller on very small screens */
+    }
+    
+    .hero-content p {
+        font-size: 16px !important; /* Smaller subtitle on very small screens */
+        letter-spacing: 1px;
+    }
+    
+    .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+/* Image Placeholders */
+.image-placeholder {
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+    border-radius: 10px;
+    min-height: 200px;
+}
+
+/* Tuition Page Specific Styles */
+.tuition-hero {
+    background-image: url('https://picsum.photos/1920/1080?violin');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+.tuition-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 24, 16, 0.7) 0%, rgba(101, 67, 33, 0.6) 100%);
+    z-index: 1;
+}
+
+.tuition-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.tuition-hero h1 {
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 72px;
+    margin-bottom: 1rem;
+}
+
+.tuition-hero p {
+    font-size: 24px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Tuition Highlights */
+.tuition-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.highlight-item i {
+    font-size: 48px;
+    color: var(--ast-global-color-0);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.highlight-item h4 {
+    color: #654321 !important;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.highlight-item p {
+    font-size: 14px;
+    color: var(--ast-global-color-3);
+}
+
+/* Lesson Structure */
+.lesson-structure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: var(--ast-global-color-5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-number {
+    background: linear-gradient(135deg, var(--ast-global-color-0) 0%, var(--ast-global-color-1) 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.lesson-item h4 {
+    color: #654321 !important;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: var(--ast-global-color-5);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    border: 3px solid var(--ast-global-color-0);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    background: var(--ast-global-color-0);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pricing-card h3 {
+    color: #654321 !important;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--ast-global-color-0);
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: var(--ast-global-color-3);
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.pricing-card li:last-child {
+    border-bottom: none;
+}
+
+.pricing-note {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(249, 195, 73, 0.1);
+    border-radius: 10px;
+    font-style: italic;
+    color: var(--ast-global-color-3);
+}
+
+/* Testimonials */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background: var(--ast-global-color-5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--ast-global-color-3);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    color: #654321;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* Requirements Grid */
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.requirement-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--ast-global-color-5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.requirement-item i {
+    font-size: 48px;
+    color: var(--ast-global-color-0);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.requirement-item h4 {
+    color: #654321 !important;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.requirement-item p {
+    font-size: 14px;
+    color: var(--ast-global-color-3);
+    line-height: 1.5;
+}
+
+/* FAQ Grid */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    padding: 25px;
+    background: var(--ast-global-color-5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+    color: #654321 !important;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.faq-item p {
+    color: var(--ast-global-color-3);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: #654321 !important;
+    border-color: #654321 !important;
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    border: 2px solid #F0EBE3 !important;
+    color: #F0EBE3 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #F0EBE3 !important;
+    color: #654321 !important;
+}
+
+/* Contact Info Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-detail {
+    text-align: center;
+    color: #F0EBE3;
+}
+
+.contact-detail i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--ast-global-color-0);
+}
+
+.contact-detail p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design for Tuition Page */
+@media (max-width: 768px) {
+    .tuition-hero h1 {
+        font-size: 48px !important;
+    }
+    
+    .tuition-hero p {
+        font-size: 18px !important;
+    }
+    
+    .tuition-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .lesson-structure {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+    
+    .requirements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 544px) {
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
