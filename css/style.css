@@ -24,7 +24,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--ast-global-color-3);
+    color: #4a4a47;
     background-color: var(--ast-global-color-4);
 }
 
@@ -443,6 +443,12 @@ a:hover {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .music-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 48px; }
     h2 { font-size: 32px; }
@@ -525,7 +531,7 @@ a:hover {
 
 /* Tuition Page Specific Styles */
 .tuition-hero {
-    background-image: url('https://picsum.photos/1920/1080?violin');
+    background-image: url('../images/teaching.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -738,6 +744,18 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
+}
+
+.testimonial::before {
+    content: '\201C';
+    font-size: 60px;
+    color: var(--ast-global-color-0);
+    font-family: Georgia, serif;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+    opacity: 0.3;
 }
 
 .testimonial-image {
