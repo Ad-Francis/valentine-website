@@ -2,7 +2,7 @@
 
 /* CSS Variables - Color Scheme from Original Site */
 :root {
-    --ast-global-color-0: #F9C349; /* Golden yellow */
+    --ast-global-color-0: #B8860B; /* Dark goldenrod */
     --ast-global-color-1: #FFB100; /* Orange */
     --ast-global-color-2: #1E1810; /* Dark brown/black */
     --ast-global-color-3: #62615C; /* Gray */
@@ -311,7 +311,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 24, 16, 0.8) 0%, rgba(249, 195, 73, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(30, 24, 16, 0.9) 0%, rgba(101, 67, 33, 0.85) 100%);
     z-index: 1;
 }
 
@@ -453,31 +453,79 @@ a:hover {
     h1 { font-size: 48px; }
     h2 { font-size: 32px; }
     h3 { font-size: 24px; }
-    
+
     .hero-section {
         padding: 120px 20px 60px;
     }
-    
+
     .hero-content h1 {
-        font-size: 80px !important; /* Smaller on mobile but still dramatic */
+        font-size: 80px !important;
     }
-    
+
     .hero-content p {
-        font-size: 20px !important; /* Smaller subtitle on mobile */
+        font-size: 20px !important;
         letter-spacing: 2px;
     }
-    
+
     .about-section {
         grid-template-columns: 1fr;
         gap: 40px;
+        text-align: center;
     }
-    
+
+    .about-text {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-text .btn {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
     .section {
         padding: 60px 0;
     }
-    
+
+    .section h2,
+    .section h3,
+    .section p {
+        text-align: center;
+    }
+
     .music-grid {
         grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .tuition-highlights,
+    .lesson-structure,
+    .pricing-grid,
+    .requirements-grid,
+    .faq-grid,
+    .testimonials {
+        text-align: center;
+    }
+
+    .lesson-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
     }
 }
 
@@ -529,13 +577,62 @@ a:hover {
     min-height: 200px;
 }
 
+/* Quick Navigation */
+.quick-nav {
+    background: var(--ast-global-color-5);
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 100px;
+    z-index: 99;
+}
+
+.quick-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.quick-nav a {
+    color: #654321;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.quick-nav a:hover {
+    background: var(--ast-global-color-0);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .quick-nav {
+        top: 60px;
+    }
+
+    .quick-nav ul {
+        gap: 10px;
+    }
+
+    .quick-nav a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
 /* Tuition Page Specific Styles */
 .tuition-hero {
     background-image: url('../images/teaching.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 25%;
     background-repeat: no-repeat;
-    min-height: 70vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -695,7 +792,7 @@ a:hover {
 .price {
     font-size: 48px;
     font-weight: bold;
-    color: var(--ast-global-color-0);
+    color: #B8860B;
     margin-bottom: 5px;
 }
 
@@ -852,19 +949,24 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #654321 !important;
-    border-color: #654321 !important;
+    background: linear-gradient(135deg, #D4A017 0%, #B8860B 50%, #9A7209 100%) !important;
+    border: none !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #B8860B 0%, #9A7209 50%, #7D5F07 100%) !important;
 }
 
 .btn-secondary {
-    background-color: transparent !important;
-    border: 2px solid #F0EBE3 !important;
-    color: #F0EBE3 !important;
+    background: linear-gradient(135deg, #D4A017 0%, #B8860B 50%, #9A7209 100%) !important;
+    border: none !important;
+    color: white !important;
 }
 
 .btn-secondary:hover {
-    background-color: #F0EBE3 !important;
-    color: #654321 !important;
+    background: linear-gradient(135deg, #B8860B 0%, #9A7209 50%, #7D5F07 100%) !important;
+    color: white !important;
 }
 
 /* Contact Info Grid */

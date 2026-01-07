@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
+                const quickNav = document.querySelector('.quick-nav');
+                const quickNavHeight = quickNav ? quickNav.offsetHeight : 0;
+                const targetPosition = targetSection.offsetTop - headerHeight - quickNavHeight;
                 
                 window.scrollTo({
                     top: targetPosition,
@@ -29,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.backgroundColor = 'rgba(243, 240, 230, 0.95)';
             header.style.backdropFilter = 'blur(10px)';
         } else {
-            header.style.backgroundColor = 'var(--ast-global-color-5)';
-            header.style.backdropFilter = 'none';
+            header.style.backgroundColor = 'rgba(243, 240, 230, 0.9)';
+            header.style.backdropFilter = 'blur(10px)';
         }
     });
     
