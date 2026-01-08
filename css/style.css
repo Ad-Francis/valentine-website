@@ -123,6 +123,22 @@ a:hover {
     gap: 12px;
 }
 
+.support-btn {
+    background: linear-gradient(135deg, #D4A017 0%, #B8860B 50%, #9A7209 100%);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.4);
+}
+
 .social-icon {
     width: 20px;
     height: 20px;
@@ -138,7 +154,7 @@ a:hover {
 .hero-section {
     background-image: url('../images/hero_image.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
@@ -335,7 +351,7 @@ a:hover {
 .site-footer {
     background-color: var(--ast-global-color-4);
     border-top: 2px solid var(--ast-global-color-4);
-    padding: 96px 40px 40px;
+    padding: 40px 40px 20px;
 }
 
 .footer-content {
@@ -384,6 +400,95 @@ a:hover {
 .footer-social .social-icon {
     width: 24px;
     height: 24px;
+}
+
+/* Simple Footer */
+.footer-simple {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-brand {
+    font-size: 18px;
+    color: var(--ast-global-color-0);
+    margin-bottom: 12px;
+}
+
+.footer-brand span {
+    color: var(--ast-global-color-0);
+    margin: 0 10px;
+}
+
+.footer-nav {
+    margin-bottom: 12px;
+}
+
+.footer-nav a {
+    color: var(--ast-global-color-2);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--ast-global-color-0);
+}
+
+.footer-contact {
+    font-size: 14px;
+    color: var(--ast-global-color-3);
+}
+
+.footer-contact a {
+    color: var(--ast-global-color-2);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--ast-global-color-0);
+}
+
+.footer-contact span {
+    margin: 0 10px;
+    color: var(--ast-global-color-0);
+}
+
+.footer-bottom .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: var(--ast-global-color-0);
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #9A7209;
+}
+
+@media (max-width: 768px) {
+    .footer-nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-contact a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer-contact span {
+        display: none;
+    }
 }
 
 /* Mobile Navigation Styles */
@@ -613,7 +718,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .quick-nav {
-        top: 60px;
+        top: 100px;
     }
 
     .quick-nav ul {
@@ -655,6 +760,23 @@ a:hover {
 .tuition-hero .container {
     position: relative;
     z-index: 2;
+}
+
+/* Concerts Page Hero */
+.concerts-hero {
+    background-image: url('../images/spin.jpg');
+    background-position: center 90%;
+}
+
+/* Sheet Music Page Hero */
+.sheetmusic-hero {
+    background-image: url('../images/sheet.jpg');
+}
+
+/* About Page Hero */
+.about-hero {
+    background-image: url('../images/wall1.jpg');
+    background-position: center 35%;
 }
 
 .tuition-hero h1 {
@@ -1046,8 +1168,151 @@ a:hover {
     .requirements-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Concerts Page Styles */
+.concerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.concert-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.concert-card.featured {
+    border: 2px solid var(--ast-global-color-0);
+}
+
+.concert-date {
+    background: linear-gradient(135deg, var(--ast-global-color-0) 0%, #9A7209 100%);
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.concert-date .day {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.concert-date .month {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.concert-details {
+    padding: 25px;
+    flex: 1;
+}
+
+.concert-details h3 {
+    margin-bottom: 10px;
+    color: var(--ast-global-color-1);
+}
+
+.concert-location {
+    color: var(--ast-global-color-0);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.concert-location i {
+    margin-right: 5px;
+}
+
+.concert-address {
+    font-size: 14px;
+    color: var(--ast-global-color-3);
+    margin-bottom: 15px;
+}
+
+.concert-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.concert-info span {
+    font-size: 14px;
+    color: var(--ast-global-color-2);
+}
+
+.concert-info i {
+    color: var(--ast-global-color-0);
+    margin-right: 5px;
+}
+
+.concert-note {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ast-global-color-3);
+}
+
+/* Past Concerts Gallery */
+.past-concerts-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-placeholder {
+    background: var(--ast-global-color-4);
+    border-radius: 10px;
+    padding: 60px 40px;
+    text-align: center;
+    color: var(--ast-global-color-3);
+}
+
+.gallery-placeholder i {
+    font-size: 60px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.gallery-placeholder p {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .concerts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concert-card {
+        flex-direction: column;
+    }
+
+    .concert-date {
+        flex-direction: row;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .concert-date .day {
+        font-size: 32px;
     }
 }
