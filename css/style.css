@@ -248,6 +248,8 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .music-card img {
@@ -261,16 +263,21 @@ a:hover {
     color: #654321 !important; /* Dark brown - improved contrast */
 }
 
+.music-card p {
+    flex-grow: 1;
+}
+
 .music-card .btn {
-    background-color: #654321 !important; /* Dark brown */
-    color: var(--ast-global-color-4) !important;
-    border-color: #654321 !important;
+    background: linear-gradient(135deg, #D4A017 0%, #B8860B 50%, #9A7209 100%) !important;
+    color: white !important;
+    border: none !important;
+    margin-top: auto;
+    align-self: center;
 }
 
 .music-card .btn:hover {
-    background-color: var(--ast-global-color-0) !important; /* Golden yellow */
-    color: var(--ast-global-color-4) !important;
-    border-color: var(--ast-global-color-0) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.4);
 }
 
 /* Buttons */
@@ -718,7 +725,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .quick-nav {
-        top: 100px;
+        top: 160px;
     }
 
     .quick-nav ul {

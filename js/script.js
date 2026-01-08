@@ -122,12 +122,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 height: 60px;
                 bottom: 40px;
                 right: 40px;
-                background-color: #25d366;
+                background: linear-gradient(135deg, #D4A017 0%, #B8860B 50%, #9A7209 100%);
                 color: white;
                 border-radius: 50px;
                 text-align: center;
                 font-size: 30px;
-                box-shadow: 2px 2px 3px #999;
+                box-shadow: 0 4px 12px rgba(184, 134, 11, 0.4);
                 z-index: 1000;
                 display: flex;
                 align-items: center;
@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 transition: all 0.3s ease;
                 text-decoration: none;
             }
-            
+
             .whatsapp-float:hover {
-                background-color: #128c7e;
+                background: linear-gradient(135deg, #E4B027 0%, #C8961B 50%, #AA8219 100%);
                 color: white;
                 transform: scale(1.1);
             }
